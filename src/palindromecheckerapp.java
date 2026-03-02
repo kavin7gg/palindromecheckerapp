@@ -1,6 +1,5 @@
 public class UseCase8PalindromeCheckerApp {
 
-    // Node class for singly linked list
     static class Node {
         char data;
         Node next;
@@ -10,13 +9,10 @@ public class UseCase8PalindromeCheckerApp {
             this.next = null;
         }
     }
-
     public static void main(String[] args) {
 
-        // Define input string
         String input = "level";
 
-        // Convert string to linked list
         Node head = null;
         Node tail = null;
 
@@ -32,21 +28,17 @@ public class UseCase8PalindromeCheckerApp {
             }
         }
 
-        // Check palindrome
         boolean isPalindrome = checkPalindrome(head);
 
-        // Display result
         System.out.println("Input : " + input);
         System.out.println("Is Palindrome? : " + isPalindrome);
     }
 
-    // Method to check palindrome using linked list
     public static boolean checkPalindrome(Node head) {
 
         if (head == null || head.next == null)
             return true;
 
-        // Step 1: Find middle using fast & slow pointer
         Node slow = head;
         Node fast = head;
 
@@ -54,11 +46,8 @@ public class UseCase8PalindromeCheckerApp {
             slow = slow.next;
             fast = fast.next.next;
         }
-
-        // Step 2: Reverse second half
         Node secondHalf = reverseList(slow);
 
-        // Step 3: Compare first and second half
         Node firstHalf = head;
         Node temp = secondHalf;
 
@@ -71,9 +60,6 @@ public class UseCase8PalindromeCheckerApp {
         }
 
         return true;
-    }
-
-    // Reverse linked list (in-place)
     public static Node reverseList(Node head) {
 
         Node prev = null;
