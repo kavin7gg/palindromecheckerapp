@@ -56,6 +56,7 @@ public class palindromecheckerapp {
                     break;
 
 
+
                 case 4:
 
                     System.out.print("Enter string: ");
