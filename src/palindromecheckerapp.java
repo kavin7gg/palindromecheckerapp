@@ -55,6 +55,7 @@ public class palindromecheckerapp {
                     System.out.println(input4 + (isPalindrome4 ? " is a palindrome." : " is not a palindrome."));
                     break;
 
+
                 case 4:
 
                     System.out.print("Enter string: ");
